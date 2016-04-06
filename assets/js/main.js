@@ -42,8 +42,7 @@
 							'images/dog2.png': 'center',
 							'images/dog3.png': 'center',
 							'images/dog4.png': 'center',
-							'images/dog5.png': 'center',
-							'images/dog6.png': 'center'
+							'images/dog5.png': 'center'
 						},
 
 					// Delay.
