@@ -351,7 +351,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #93abef !important;
+			color: #5078e5 !important;
 			text-decoration: none;
 		}
 
@@ -972,7 +972,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #5078e5;
+			background-color: #93abef;
 		}
 
 		input[type="submit"]:active,
