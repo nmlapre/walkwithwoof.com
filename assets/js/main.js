@@ -39,7 +39,6 @@
 
 					// Images (in the format of 'url': 'alignment').
 						images: {
-							'images/dog1.png': 'center',
 							'images/dog2.png': 'center',
 							'images/dog3.png': 'center',
 							'images/dog4.png': 'center',
