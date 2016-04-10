@@ -140,6 +140,7 @@
 
 			// Events.
 			// Note: If you're *not* using AJAX, get rid of this event listener.
+			/*
 				$form.addEventListener('submit', function(event) {
 
 					event.stopPropagation();
@@ -169,6 +170,7 @@
 						}, 750);
 
 				});
+				*/
 
 		})();
 
