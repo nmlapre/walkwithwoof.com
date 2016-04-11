@@ -160,7 +160,8 @@
 							
 							//get the url of the form
 							//var url = 'http://walkwithwoof.herokuapp.com/';
-							var data = $('#email').serialize(); // $('.form')?
+							var data = $(this).serialize(); // $('.form')?
+							$message._show('success', 'Thank you!');
 							
 							//ajax to post
 							$.ajax({
@@ -177,7 +178,7 @@
 								// 	$submit.disabled = false;
 								// }
 							});
-							$message._show('success', 'Thank you!');
+							
 							//$form.reset();
 							//$submit.disabled = false;
 
