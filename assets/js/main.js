@@ -159,26 +159,27 @@
 						window.setTimeout(function() {
 							
 							//get the url of the form
-							var url = $form.attr('action');
-							$.each($form.serializeArray(), function(i, field) {
-								data[field.name] = field.value;
-							});
+							var url = 'http://walkwithwoof.herokuapp.com/';
+							var data = $('#email').serialize(); // $('.form')?
 							
 							//ajax to post
 							$.ajax({
-								url: url,
+								url: 'http://walkwithwoof.herokuapp.com/',
 								type: 'POST',
 								data: data,
-								success: function(data) {
-									$message._show('success', 'Thank you!');
-									$form.reset();
-									$submit.disabled = false;
-								},
-								error: function(e) {
-									$message._show('failure', 'Something went wrong. Please try again.');
-									$submit.disabled = false;
-								}
+								// success: function(data) {
+								// 	$message._show('success', 'Thank you!');
+								// 	$form.reset();
+								// 	$submit.disabled = false;
+								// },
+								// error: function(e) {
+								// 	$message._show('failure', 'Something went wrong. Please try again.');
+								// 	$submit.disabled = false;
+								// }
 							});
+							$message._show('success', 'Thank you!');
+							$form.reset();
+							$submit.disabled = false;
 
 						}, 750);
 
