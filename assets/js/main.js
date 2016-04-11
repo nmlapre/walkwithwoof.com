@@ -159,14 +159,14 @@
 						window.setTimeout(function() {
 							
 							//get the url of the form
-							var url = 'http://walkwithwoof.herokuapp.com/';
-							var data = $('#email').serialize(); // $('.form')?
+							//var url = 'http://walkwithwoof.herokuapp.com/';
+							//var data = $('#email').serialize(); // $('.form')?
 							
 							//ajax to post
 							$.ajax({
 								url: 'http://walkwithwoof.herokuapp.com/',
 								type: 'POST',
-								data: data,
+								data: email=test@test.com,
 								// success: function(data) {
 								// 	$message._show('success', 'Thank you!');
 								// 	$form.reset();
