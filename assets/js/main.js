@@ -158,12 +158,15 @@
 					// but there's enough here to piece together a working AJAX submission call that does.
 						window.setTimeout(function() {
 							
-							//get the url of the form
-							//var url = 'http://walkwithwoof.herokuapp.com/';
-							var data = $(this).serialize(); // $('.form')?
+							// see if this fails
+							$form.reset();
+							$submit.disabled = false;
 							$message._show('success', 'Thank you!');
 							
-							//ajax to post
+							//get the email data from the form
+							var data = $form.serialize();
+							
+							//post with AJAX
 							$.ajax({
 								url: 'http://walkwithwoof.herokuapp.com/',
 								type: 'POST',
@@ -179,8 +182,7 @@
 								// }
 							});
 							
-							//$form.reset();
-							//$submit.disabled = false;
+							
 
 						}, 750);
 
