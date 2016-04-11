@@ -164,7 +164,7 @@
 							$message._show('success', 'Thank you!');
 							
 							//get the email data from the form
-							var data = $form.serialize();
+							var data = $('form').serialize();
 							
 							//post with AJAX
 							$.ajax({
