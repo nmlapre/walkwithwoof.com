@@ -157,16 +157,28 @@
 					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
 					// but there's enough here to piece together a working AJAX submission call that does.
 						window.setTimeout(function() {
-
-							// Reset form.
-								$form.reset();
-
-							// Enable submit.
-								$submit.disabled = false;
-
-							// Show message.
-								$message._show('success', 'Thank you!');
-								//$message._show('failure', 'Something went wrong. Please try again.');
+							
+							//get the url of the form
+							var url = $form.attr('action');
+							$.each($form.serializeArray(), function(i, field) {
+								data[field.name] = field.value;
+							});
+							
+							//ajax to post
+							$.ajax({
+								url: url,
+								type: 'POST',
+								data: data,
+								success: function(data) {
+									$message._show('success', 'Thank you!');
+									$form.reset();
+									$submit.disabled = false;
+								},
+								error: function(e) {
+									$message._show('failure', 'Something went wrong. Please try again.');
+									$submit.disabled = false;
+								}
+							});
 
 						}, 750);
 
